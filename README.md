@@ -31,7 +31,8 @@ Make sure your environment is activated and you're in the project root directory
 Run the following command:
 
 ```bash
-python main.py
+python manage.py runserver
+
 ```
 
 You can now use the command-line interface to search and get movie recommendations based on your input.
