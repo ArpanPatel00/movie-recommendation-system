@@ -22,6 +22,7 @@ Make sure you have Python 3.8 or a newer version installed. You can check your P
 Bash
 
 python --version
+
 2. Clone the Repository
 First, clone this repository to your local machine.
 
