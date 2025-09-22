@@ -1,65 +1,91 @@
+Movie Recommendation System (MRS)
+A simple, command-line movie recommendation system that suggests similar movies using a content-based filtering model. Enter your favorite movie, and get a list of similar ones to watch next!
 
-# Movie Recommendation System (MRS)
+Features
+Content-Based Recommendations: Suggests movies based on similarity in their metadata (genre, keywords, overview, etc.).
 
-This repository contains all the project files and necessary details about how to run the project on your local machine.
+Simple CLI: An easy-to-use command-line interface to get instant recommendations.
 
-| Title                                    | Description                                                 |
-| ---------------------------------------- | ----------------------------------------------------------- |
-| Requirements :heavy_check_mark:          | Requirements and essential links to get started             |
-| Running in Local :desktop_computer:      | Instructions to run the project on your local machine       |
-| Model Training :bar_chart:               | Basic idea behind how the model was prepared                |
+Customizable: You can easily modify the dataset and retrain the model to customize the recommendations.
 
-<hr>
+Cosine Similarity Model: Utilizes a robust and popular method for measuring content similarity.
 
-## Requirements :heavy_check_mark:
+Installation Guide
+Follow these steps to set up and run the project on your local machine.
 
-To build this project without any errors/issues, the following requirements need to be satisfied:
+1. Prerequisites
+Make sure you have Python 3.8 or a newer version installed. You can check your Python version with:
 
-1. Python version >= 3.8 (Tested on 3.9.16)
-2. Install the dependencies from the requirements.txt file:
+Bash
 
-```bash
+python --version
+2. Clone the Repository
+First, clone this repository to your local machine.
+
+Bash
+
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+(Note: Replace the URL with the actual link to your repository.)
+
+3. Create a Virtual Environment
+It is a best practice to create a virtual environment to manage project dependencies without affecting your global Python installation.
+
+Bash
+
+# For Windows
+python -m venv venv
+.\venv\Scripts\activate
+
+# For macOS / Linux
+python3 -m venv venv
+source venv/bin/activate
+4. Install Dependencies
+With your virtual environment activated, install all the required packages using the requirements.txt file.
+
+Bash
+
 pip install -r requirements.txt
-```
+How to Run
+Once the installation is complete, you can run the recommendation system from the project's root directory.
 
-<hr>
+Execute the main script in your terminal:
 
-## Running in Local :desktop_computer:
+Bash
 
-Make sure your environment is activated and you're in the project root directory.
-
-Run the following command:
-
-```bash
 python main.py
-```
+When prompted, enter the full name of a movie you like and press Enter.
 
-You can now use the command-line interface to search and get movie recommendations based on your input.
+Example Usage
+Here is an example of how the command-line interface works:
 
-Note: This version is script-based and does not include any web interface.
+Enter a movie you like: The Dark Knight
+-----------------------------------------
+Recommendations for "The Dark Knight":
+1. The Dark Knight Rises
+2. Batman Begins
+3. Batman
+4. Batman Returns
+5. Inception
+-----------------------------------------
+Note: This is a script-based application and does not include a web or graphical user interface (GUI).
 
-<hr>
+Model Details
+This system uses a content-based filtering approach, which recommends items based on their attributes.
 
-## Model Training :bar_chart:
+Core Technique: The model calculates the cosine similarity between the feature vectors of movies. A higher cosine similarity score between two movies means they are more alike in terms of content.
 
-This system uses a content-based filtering model trained using cosine similarity on movie metadata.
+Feature Extraction: For each movie in the movies.csv dataset, a combined feature string is created from its metadata (e.g., genres, keywords, director, main cast, overview). This text is then converted into a numerical vector using a TF-IDF Vectorizer.
 
-The model uses:
-- Movie titles and descriptions
-- Cosine similarity between feature vectors
+Recommendation Logic: When you input a movie, the system finds its pre-calculated vector and compares it against the vectors of all other movies. The movies with the highest similarity scores are then presented as the top recommendations.
 
-You can modify the dataset (`movies.csv`) and retrain the model using the main script to improve or customize recommendations.
+Dataset: The initial model is trained on movies.csv, which contains data for approximately the top 2500 movies.
 
-<hr>
+About the Developer
+Name: Arpan Patel
 
-## About
+University: Galgotias University
 
-**Developed by:** Arpan Patel  
-**University:** Galgotias University  
-**Course:** B.Tech CSE – 2025
+Course: B.Tech CSE – 2025
 
----
-
-This project was built for learning and demonstration purposes. Only the top ~2500 movies (e.g., based on IMDb ratings) are included in the dataset.
-
----
+This project was built for learning and demonstration purposes.
