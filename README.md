@@ -1,16 +1,19 @@
-Movie Recommendation System (MRS)
+MOVIE RECOMMENDATION SYSTEM (MRS)
+
 A simple, command-line movie recommendation system that suggests similar movies using a content-based filtering model. Enter your favorite movie, and get a list of similar ones to watch next!
 
 Features
-Content-Based Recommendations: Suggests movies based on similarity in their metadata (genre, keywords, overview, etc.).
 
-Simple CLI: An easy-to-use command-line interface to get instant recommendations.
+.Content-Based Recommendations: Suggests movies based on similarity in their metadata (genre, keywords, overview, etc.).
 
-Customizable: You can easily modify the dataset and retrain the model to customize the recommendations.
+.Simple CLI: An easy-to-use command-line interface to get instant recommendations.
 
-Cosine Similarity Model: Utilizes a robust and popular method for measuring content similarity.
+.Customizable: You can easily modify the dataset and retrain the model to customize the recommendations.
+
+.Cosine Similarity Model: Utilizes a robust and popular method for measuring content similarity.
 
 Installation Guide
+
 Follow these steps to set up and run the project on your local machine.
 
 1. Prerequisites
@@ -53,7 +56,7 @@ Execute the main script in your terminal:
 
 Bash
 
-python main.py
+python manage.py runserver
 When prompted, enter the full name of a movie you like and press Enter.
 
 Example Usage
@@ -82,10 +85,11 @@ Recommendation Logic: When you input a movie, the system finds its pre-calculate
 Dataset: The initial model is trained on movies.csv, which contains data for approximately the top 2500 movies.
 
 About the Developer
+
 Name: Arpan Patel
 
 University: Galgotias University
 
-Course: B.Tech CSE – 2025
+Course: B.Tech CSE 
 
 This project was built for learning and demonstration purposes.
